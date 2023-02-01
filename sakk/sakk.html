@@ -21,6 +21,7 @@
             text-align: center;
 
             text-transform: uppercase;
+            background-repeat: no-repeat;
         }
         table{
             border: 3px solid black;
@@ -29,13 +30,27 @@
             border-radius: 50%;
         }
 
-
-        .feherBastya
+        .feherBastya, .feherFuto, .feherLo, .feherVezer, .feherKiraly, .feherGyalog,
+        .feketeBastya, .feketeFuto, .feketeLo, .feketeVezer, .feketeKiraly, .feketeGyalog
         {
             background-image: url(./sakkbabuk.png);
-            background-size: 300px 225px;
-            background-position: 32% 100%;
+            background-size: 300% 300%;
         }
+
+
+        .feherBastya { background-position: 30% 103%;}
+        .feherFuto { background-position: 70% 103%; }
+        .feherLo  {  background-position: -10% 103%; }
+        .feherVezer { background-position: 110% 53%; }
+        .feherKiraly { background-position: 70% 53%; }
+        .feherGyalog { background-position: 110% 103%; }
+
+        .feketeBastya { background-position: 70% 5% }
+        .feketeFuto { background-position: 30% -5%}
+        .feketeVezer { background-position: 110% -5% }
+        .feketeKiraly { background-position: 70% 53%}
+        .feketeGyalog { background-position: 30% 53% }
+        .feketeLo{ background-position: 110 -5;}
     </style>
 </head>
 <body>
@@ -48,17 +63,17 @@
         <tr>
             <td>1</td>
             <td class="fekete feherBastya"></td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
-            <td class="fekete"></td>
+            <td class="feherLo"></td>
+            <td class="fekete feherFuto"></td>
+            <td class="feherVezer"></td>
+            <td class="fekete feherKiraly"></td>
             <td></td>
             <td class="fekete"></td>
             <td></td>
         </tr>
         <tr>
             <td>2</td>
-            <td></td>
+            <td class="feherGyalog"></td>
             <td class="fekete"></td>
             <td></td>
             <td class="fekete"></td>
@@ -124,9 +139,9 @@
         </tr>
         <tr>
             <td>8</td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
+            <td class="feketeBastya"></td>
+            <td class="fekete feketeLo"></td>
+            <td class="feketeFuto"></td>
             <td class="fekete"></td>
             <td></td>
             <td class="fekete"></td>
