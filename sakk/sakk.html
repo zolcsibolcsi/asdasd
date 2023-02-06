@@ -7,7 +7,7 @@
     <title>Sakk</title>
     <style>
         body{
-            background-color: salmon;
+            background: url(./avatar_lunar_new_year_2022.png);
         }
         .fekete{
             background-color: black;
@@ -25,6 +25,7 @@
             border-bottom-right-radius: 50%;
             font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             text-transform: uppercase;
+            background-repeat: no-repeat;
         }
         table{
             border: 3px solid black;
@@ -32,10 +33,74 @@
             margin: auto;
             border-radius: 50%;
         }
+
+        .feherBastya, .feherFuto, .feherLo, .feherVezer, .feherKiraly, .feherGyalog,
+        .feketeBastya, .feketeFuto, .feketeLo, .feketeVezer, .feketeKiraly, .feketeGyalog
+        {
+            background-image: url(./sakkbabuk.png);
+            background-size: 300% 300%;
+        }
+
+
+        .feherBastya { background-position: 30% 103%;}
+        .feherFuto { background-position: 70% 103%; }
+        .feherLo  {  background-position: -10% 103%; }
+        .feherVezer { background-position: 110% 53%; }
+        .feherKiraly { background-position: 70% 53%; }
+        .feherGyalog { background-position: 110% 103%; }
+
+        .feketeBastya { background-position: 70% -4% }
+        .feketeFuto { background-position: 30% -5%}
+        .feketeVezer { background-position: -10% 53% }
+        .feketeKiraly { background-position: 70% 53%}
+        .feketeGyalog { background-position: 30% 53% }
+        .feketeLo{ background-position: 110% -5%;}
     </style>
 </head>
-<body>
-    <!--<img src="./bábuk.png" alt=""> -->
+<body onload="init()">
+    <script>
+        var sorszam = 0;
+        var elso;
+        function kattint(elem)
+        {
+            //console.log(elem)
+            if(sorszam==0)
+            {
+                if(elem.dataset["babu"]!="")
+                {
+                    elso=elem
+                    sorszam++
+                }
+            }
+            else
+            {
+                //lerakás
+                elem.classList.add(elso.dataset["babu"]);
+                elem.dataset["babu"]=elso.dataset["babu"];
+
+                //régi törlése
+
+                elso.classList.remove(elso.dataset["babu"]);
+                elem.dataset["babu"]="";
+                
+
+                sorszam=0;
+            }
+
+            console.log(elem)
+
+        }
+        function init()
+            {
+                let cellak = document.querySelectorAll("td");
+
+                for(let i=0;i<cellak.length;i++)
+                {
+                    cellak[i].addEventListener("click",function(){ kattint(this); });
+                }
+            }
+    </script>
+    <img src="./sakkbabuk.png" alt="" width="140" height="140">
 
     <table>
         <tr>
@@ -43,18 +108,18 @@
         </tr>
         <tr>
             <td>1</td>
-            <td class="fekete"></td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
+            <td class="fekete feherBastya" data-babu="feherBastya"></td>
+            <td class="feherLo" data-babu="feherLo"></td>
+            <td class="fekete feherFuto" data-babu="feherFuto"></td>
+            <td class="feherVezer" data-babu="feherVezer"></td>
+            <td class="fekete feherKiraly" data-babu="feherKiraly"></td>
+            <td data-babu=""></td>
+            <td class="fekete" data-babu=""></td>
+            <td data-babu=""></td>
         </tr>
         <tr>
             <td>2</td>
-            <td></td>
+            <td class="feherGyalog"></td>
             <td class="fekete"></td>
             <td></td>
             <td class="fekete"></td>
@@ -120,10 +185,10 @@
         </tr>
         <tr>
             <td>8</td>
-            <td></td>
-            <td class="fekete"></td>
-            <td></td>
-            <td class="fekete"></td>
+            <td class="feketeBastya"></td>
+            <td class="fekete feketeLo"></td>
+            <td class="feketeFuto"></td>
+            <td class="fekete feketeVezer"></td>
             <td></td>
             <td class="fekete"></td>
             <td></td>
