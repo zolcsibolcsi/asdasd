@@ -53,7 +53,7 @@
         .feketeLo{ background-position: 110% -5%;}
     </style>
 </head>
-<body>
+<body onload="init()">
     <script>
         var sorszam = 0;
         var elso;
@@ -76,15 +76,25 @@
 
                 //régi törlése
 
-                elem.classList.remove(elso.dataset["babu"]);
+                elso.classList.remove(elso.dataset["babu"]);
                 elem.dataset["babu"]="";
                 
 
                 sorszam=0;
             }
 
-            console.log(sorszam)
+            console.log(elem)
+
         }
+        function init()
+            {
+                let cellak = document.querySelectorAll("td");
+
+                for(let i=0;i<cellak.length;i++)
+                {
+                    cellak[i].addEventListener("click",function(){ kattint(this); });
+                }
+            }
     </script>
     <img src="./sakkbabuk.png" alt="" width="140" height="140">
 
@@ -94,14 +104,14 @@
         </tr>
         <tr>
             <td>1</td>
-            <td class="fekete feherBastya" data-babu="feherBastya" onclick="kattint(this)"></td>
-            <td class="feherLo" data-babu="feherBastya" onclick="kattint(this)"></td>
-            <td class="fekete feherFuto" data-babu="feherFuto" onclick="kattint(this)"></td>
-            <td class="feherVezer" data-babu="feherVezer" onclick="kattint(this)"></td>
-            <td class="fekete feherKiraly" data-babu="feherkiraly" onclick="kattint(this)"></td>
-            <td data-babu="" onclick="kattint(this)"></td>
-            <td class="fekete" data-babu="" onclick="kattint(this)"></td>
-            <td data-babu="" onclick="kattint(this)"></td>
+            <td class="fekete feherBastya" data-babu="feherBastya"></td>
+            <td class="feherLo" data-babu="feherLo"></td>
+            <td class="fekete feherFuto" data-babu="feherFuto"></td>
+            <td class="feherVezer" data-babu="feherVezer"></td>
+            <td class="fekete feherKiraly" data-babu="feherKiraly"></td>
+            <td data-babu=""></td>
+            <td class="fekete" data-babu=""></td>
+            <td data-babu=""></td>
         </tr>
         <tr>
             <td>2</td>
