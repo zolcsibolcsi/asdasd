@@ -64,7 +64,6 @@
         {
 			if(elem.dataset["babu"]!="")
             {
-<<<<<<< HEAD
                 //ureset ne lehessen felvenni                
                 if(elem.dataset["babu"] && elem.dataset["babu"]!="")
                 {
@@ -87,38 +86,13 @@
                 //lerakás
                 elem.classList.add(elso.dataset["babu"]);
                 elem.dataset["babu"]=elso.dataset["babu"];
-=======
-				elso=elem;
-				sorszam++;
-			}
-			
-		}
-		else{
-			//lerakás
-			elem.classList.add(elso.dataset["babu"]);
-			elso.dataset["babu"]=elso.dataset["babu"];
-			
-			//régi törlése
-			elso.classList.remove(elso.dataset["babu"]);
-			elso.dataset["babu"]="";
-			
-			
-			sorszam=0;
-		}
->>>>>>> 8f122223342382a40894da5f67296d2d6ce97407
 
 		console.log(sorszam);
 	}
 
-<<<<<<< HEAD
                 elso.classList.remove(elso.dataset["babu"]);
                 elso.dataset["babu"]="";
                 
-=======
-    function init()
-    {
-		let cellak=document.querySelectorAll("td");
->>>>>>> 8f122223342382a40894da5f67296d2d6ce97407
 
 		for(let i=0;i<cellak.length;i++)
 		{
