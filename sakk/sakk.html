@@ -19,7 +19,7 @@
             background-color: white;
             border: 1px solid black;
             text-align: center;
-
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             text-transform: uppercase;
             background-repeat: no-repeat;
         }
@@ -55,13 +55,16 @@
 </head>
 <body onload="init()">
     <script>
-        var sorszam = 0;
-        var elso;
-        function kattint(elem)
+       	var sorszam=0;
+	var elso;
+	function kattint(elem)
+	{
+		//console.log(elem)
+		if(sorszam==0)
         {
-            //console.log(elem)
-            if(sorszam==0)
+			if(elem.dataset["babu"]!="")
             {
+<<<<<<< HEAD
                 //ureset ne lehessen felvenni                
                 if(elem.dataset["babu"] && elem.dataset["babu"]!="")
                 {
@@ -84,28 +87,44 @@
                 //lerakás
                 elem.classList.add(elso.dataset["babu"]);
                 elem.dataset["babu"]=elso.dataset["babu"];
+=======
+				elso=elem;
+				sorszam++;
+			}
+			
+		}
+		else{
+			//lerakás
+			elem.classList.add(elso.dataset["babu"]);
+			elso.dataset["babu"]=elso.dataset["babu"];
+			
+			//régi törlése
+			elso.classList.remove(elso.dataset["babu"]);
+			elso.dataset["babu"]="";
+			
+			
+			sorszam=0;
+		}
+>>>>>>> 8f122223342382a40894da5f67296d2d6ce97407
 
-                //régi törlése
+		console.log(sorszam);
+	}
 
+<<<<<<< HEAD
                 elso.classList.remove(elso.dataset["babu"]);
                 elso.dataset["babu"]="";
                 
+=======
+    function init()
+    {
+		let cellak=document.querySelectorAll("td");
+>>>>>>> 8f122223342382a40894da5f67296d2d6ce97407
 
-                sorszam=0;
-            }
-
-            console.log(elem)
-
-        }
-        function init()
-            {
-                let cellak = document.querySelectorAll("td");
-
-                for(let i=0;i<cellak.length;i++)
-                {
-                    cellak[i].addEventListener("click",function(){ kattint(this); });
-                }
-            }
+		for(let i=0;i<cellak.length;i++)
+		{
+			cellak[i].addEventListener("click", function(){kattint(this);} );
+		}
+    }
     </script>
     <img src="./sakkbabuk.png" alt="" width="140" height="140">
 
