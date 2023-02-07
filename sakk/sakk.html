@@ -55,50 +55,57 @@
 </head>
 <body onload="init()">
     <script>
-       	var sorszam=0;
-	var elso;
-	function kattint(elem)
-	{
-		//console.log(elem)
-		if(sorszam==0)
+        var sorszam=0;
+        var elso;
+        function kattint(elem)
         {
-			if(elem.dataset["babu"]!="")
+            //console.log(elem)
+            if(sorszam==0)
             {
-                //ureset ne lehessen felvenni                
+                //üreset ne lehessen felvenni
                 if(elem.dataset["babu"] && elem.dataset["babu"]!="")
                 {
-                    elso=elem
-                    sorszam++
+                    elso=elem;
+                    sorszam++;
                     console.log(elem);
                     console.log(elem.dataset["babu"]);
                 }
-            }
-            else if(elem!==elso) //Sajat magara rakas ellen
-            {
                 
-                //ha van babu, akkor azt torolni kell
+            }
+            else if(elem!==elso) //saját magára rakás ellen
+            {
+    
+                //ha van ott bábu akkor törölje
                 if(elem.dataset["babu"]!="")
                 {
                     elem.classList.remove(elem.dataset["babu"]);
                     elem.dataset["babu"]="";
                 }
-
+    
                 //lerakás
                 elem.classList.add(elso.dataset["babu"]);
                 elem.dataset["babu"]=elso.dataset["babu"];
-
-		console.log(sorszam);
-	}
-
+                
+                //régi törlése
                 elso.classList.remove(elso.dataset["babu"]);
                 elso.dataset["babu"]="";
                 
-
-		for(let i=0;i<cellak.length;i++)
-		{
-			cellak[i].addEventListener("click", function(){kattint(this);} );
-		}
-    }
+                
+                sorszam=0;
+            }
+    
+            console.log(sorszam);
+        }
+    
+        function init()
+        {
+            let cellak=document.querySelectorAll("td");
+    
+            for(let i=0;i<cellak.length;i++)
+            {
+                cellak[i].addEventListener("click", function(){kattint(this);} );
+            }
+        }
     </script>
     <img src="./sakkbabuk.png" alt="" width="140" height="140">
 
