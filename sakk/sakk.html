@@ -62,14 +62,25 @@
             //console.log(elem)
             if(sorszam==0)
             {
-                if(elem.dataset["babu"]!="")
+                //ureset ne lehessen felvenni                
+                if(elem.dataset["babu"] && elem.dataset["babu"]!="")
                 {
                     elso=elem
                     sorszam++
+                    console.log(elem);
+                    console.log(elem.dataset["babu"]);
                 }
             }
-            else
+            else if(elem!==elso) //Sajat magara rakas ellen
             {
+                
+                //ha van babu, akkor azt torolni kell
+                if(elem.dataset["babu"]!="")
+                {
+                    elem.classList.remove(elem.dataset["babu"]);
+                    elem.dataset["babu"]="";
+                }
+
                 //lerakás
                 elem.classList.add(elso.dataset["babu"]);
                 elem.dataset["babu"]=elso.dataset["babu"];
@@ -77,7 +88,7 @@
                 //régi törlése
 
                 elso.classList.remove(elso.dataset["babu"]);
-                elem.dataset["babu"]="";
+                elso.dataset["babu"]="";
                 
 
                 sorszam=0;
