@@ -1,0 +1,15 @@
+body {
+    color: #8D4513;
+    background-color: #FFEFD5;
+}
+
+img{
+    border: 1px solid black;
+    margin: 10px;
+    float: left;
+}
+table,td{
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+}
