@@ -1,0 +1,35 @@
+body 
+{
+    background-image: url(./hatter.jpg);
+    color: #003399;
+}
+#teglalap
+{
+    margin: auto;
+    width: 700px;
+    background-color: #EEEECC;
+}
+
+#teglalap h1 
+{
+    text-align: center;
+}
+
+.balra
+{
+    float: left;
+}
+
+.jobbra
+{
+    float: right;
+}
+
+#alsoLink
+{
+    text-align: right;
+}
+
+h2 {
+    clear: both;
+}
