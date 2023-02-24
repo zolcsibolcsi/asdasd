@@ -2,6 +2,8 @@
 
 body{
     color: #000000;
+    font-family: tahoma, sans-serif;
+    background-color: #fff2e8;
 }
 
 .kep{
@@ -23,8 +25,8 @@ body{
     text-decoration: none;
 }
 #menu a:hover{
-    color: green;
-    text-decoration: none;
+    color: red;
+    text-decoration: underline;
 }
 
 /* t�bl�zat st�luselemek */
