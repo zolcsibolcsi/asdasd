@@ -1,0 +1,44 @@
+body {
+    background-color: #fff;
+}
+.piros
+{
+    width: 500px;
+    height: 50px;
+    background-color: red;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+.narancs
+{
+    width: 500px;
+    height: 50px;
+    background-color: orange;
+}
+.citrom {
+    width: 500px;
+    height: 50px;
+    background-color: yellow;
+}
+.zold {
+    width: 500px;
+    height: 50px;
+    background-color: green;
+}
+.kek {
+    width: 500px;
+    height: 50px;
+    background-color: blue;
+}
+.sotetlila {
+    width: 500px;
+    height: 50px;
+    background-color: purple;
+}
+.vilagoslila {
+    width: 500px;
+    height: 50px;
+    background-color: lightpink;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
