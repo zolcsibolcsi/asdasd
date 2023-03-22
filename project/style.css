@@ -1,0 +1,72 @@
+h1
+{
+    text-align: center;
+    color: white;
+    
+}
+h2
+{
+    text-align: left;
+    margin: top 20px;
+    color: white;
+}
+body
+{
+    background-image: url(https://i.pinimg.com/originals/ae/cf/20/aecf20176f360a4b1fc8d9a9aa577a8b.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div
+{
+    text-align: center;
+}
+#sor1
+{
+    text-align: left;
+}
+a
+{
+    color:rgb(236, 150, 150);
+}
+h3
+{
+    color:white ;
+    text-align: center;
+    font-size: 50px;
+    display: block;
+}
+  p
+  {
+    color: #fff;
+    text-align: center;
+    padding: 270px;
+    font-size: 40px;
+  }
+
+  b, strong {
+    color: red;
+    }
+
+  #creators {
+    padding: 0;
+    font-size: 20px;
+  }
+
+  #nyelvek{
+    background-color: #f00;
+    color: #fff;
+    border-radius: 8px;
+    width: 155px;
+    height: 60px;
+    float: right;
+    position: flex;
+  }
+  #fooldal{
+    background-color: #f00;
+    color: #fff;
+    border-radius: 8px;
+    width: 155px;
+    height: 60px;
+    float: left;
+    position: flex;
+  }
