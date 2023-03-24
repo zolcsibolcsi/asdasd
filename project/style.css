@@ -13,8 +13,9 @@ h2
 body
 {
     background-image: url(https://i.pinimg.com/originals/ae/cf/20/aecf20176f360a4b1fc8d9a9aa577a8b.gif);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
 }
 div
 {
@@ -70,3 +71,10 @@ h3
     float: left;
     position: flex;
   }
+
+footer{
+  text-align: center;
+  padding: 5px;
+  background-color: gray;
+  color: white;
+}
