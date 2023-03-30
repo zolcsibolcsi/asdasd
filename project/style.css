@@ -71,10 +71,34 @@ h3
     float: left;
     position: flex;
   }
+  .vissza{
+    background-color: #f00;
+    color: #fff;
+    border-radius: 8px;
+    width: 155px;
+    height: 60px;
+    float: left;
+    position: flex;
+  }
 
 footer{
   text-align: center;
   padding: 5px;
   background-color: gray;
   color: white;
+}
+
+.fajta{
+  color: white;
+  text-align: center;
+  list-style: none;
+  font-size: 35px;
+  padding: 250px; 
+}
+
+a {
+  text-decoration: none;
+  color: rgb(229, 255, 0);
+  padding: 5px;
+  margin: 45px;
 }
