@@ -15,15 +15,6 @@ body
     background-image: url(https://i.pinimg.com/originals/ae/cf/20/aecf20176f360a4b1fc8d9a9aa577a8b.gif);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0;
-}
-div
-{
-    text-align: center;
-}
-#sor1
-{
-    text-align: left;
 }
 a
 {
@@ -36,7 +27,7 @@ h3
     font-size: 50px;
     display: block;
 }
-  p
+  #bemutatas
   {
     color: #fff;
     text-align: center;
@@ -60,7 +51,7 @@ h3
     width: 155px;
     height: 60px;
     float: right;
-    position: flex;
+    position: fixed;
   }
   #fooldal{
     background-color: #f00;
@@ -78,7 +69,8 @@ h3
     width: 155px;
     height: 60px;
     float: left;
-    position: flex;
+    position: fixed;
+    margin: 0;
   }
 
 footer{
@@ -93,12 +85,45 @@ footer{
   text-align: center;
   list-style: none;
   font-size: 35px;
-  padding: 250px; 
+  padding: 250px;
 }
 
-a {
-  text-decoration: none;
+a {                         
+  text-decoration: underline;
   color: rgb(229, 255, 0);
   padding: 5px;
   margin: 45px;
+}
+#node-feher
+{
+  font-size: 25px;
+  padding: 100px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: white;
+}
+
+#node-narancs
+{
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: orange;
+  padding: 100px;
+}
+
+#python-narancs{
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: orange;
+  padding: 100px;
+}
+
+#python-feher{
+  font-size: 25px;
+  padding: 100px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  color: white;
 }
