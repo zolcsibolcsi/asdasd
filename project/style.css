@@ -133,8 +133,8 @@ a {
 header{
   color: white;
   background-color: gray;
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 0px;
   font-size: 25px;
   height: 30px;
   text-align: center;
@@ -148,10 +148,7 @@ header{
   color: yellow;
   text-align: center;
 }
-#fojava{
-  color: yellow;
-  text-align: center;
-}
+
 #fopy{
   color: yellow;
   text-align: center;
