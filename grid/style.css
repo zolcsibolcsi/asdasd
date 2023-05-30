@@ -60,4 +60,32 @@ body
 {
     background-color: #96a96f;
     background-image: url(./img/img02.gif);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    margin-block: 00px;
+}
+
+.sidebar .sideBox h3 {
+    background-color: #203926;
+    color: #fff
+}
+
+.sideBox ul li {
+    padding-block: 5px;
+    color: #203926;
+    list-style-type: none;
+    padding-left: 20px;
+}
+.sideBox ul{
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.sideBox a{
+    text-decoration: none;
+}
+.sideBox a:hover li{
+    color: #96a96f;
+    background-color: #203926
 }
